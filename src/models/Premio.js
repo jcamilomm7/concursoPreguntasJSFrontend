@@ -24,6 +24,10 @@ class Premio {
       this.score += premiosObj.campeon;
     }
   }
+
+  premioPorCategoria(){
+    return premiosObj.premios[this.index]
+  }
 }
 
 export { Premio };

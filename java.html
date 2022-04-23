@@ -1,22 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Estilos propios -->
-     <link rel="stylesheet" href="./src/css/style.css">
-      <!-- Estilos de bootstrap -->
-     <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- Estilos de bootstrap -->
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <title>Document</title>
-</head>
-<body>
- <h1>aca va hacer el jeugo</h1>
-
+  </head>
+  <body>
+    <div class="containerJavaPrincipal">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="imagen"></div>
+          <div class="reglas"></div>
+          <div class="containerRondas">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 id="rondaDin"></h3>
+              </div>
+              <div class="col-md-6">
+                <h3 id="premioDin"></h3>
+              </div>
+            </div>
+          </div>
+          <div class="containercampeon">
+            <div>
+              <h2 id="premiocampeon">$1'000.000</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="bienvenido">
+            <h1>BIENVENIDOS SOFKIANOS</h1>
+          </div>
+          <div class="frases">
+            <h2>El desafío es contigo</h2>
+          </div>
+          <div class="tema">
+            <h2 id="temacategoria"></h2>
+          </div>
+          <div class="containerJuego">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="pregunta">
+                  <h2 id="pregunta"></h2>
+                </div>
+                <div class="numeropreguntas">
+                  <h2 id="relacion">2/5</h2>
+                </div>
+                <div class="containerOpciones">
+                  <div class="row">
+                    <div id="respuestasCol1" class="col-md-6"></div>
+                    <div id="respuestasCol2" class="col-md-6"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h1>Estadísticas</h1>
+                <form>
+                  <label for="jugador">Nombre</label>
+                  <input id="jugador" type="text" name="Jugador" />
+                  <label for="ronda">Ronda N°</label>
+                  <input id="ronda" type="text" name="Ronda" />
+                  <label for="premio">Premio</label>
+                  <input id="premio" type="text" name="Premio" />
+                  <label for="score">Score</label>
+                  <input id="score" type="text" name="Score" />
+                  <input id="buttonretirar" type="submit" value="Retirarse" />
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="./src/app.js" type="module"></script>
-</body>
+  </body>
 </html>
