@@ -1,0 +1,11 @@
+.navestilos{
+    background-color:$color1 ;
+}
+
+.nav-item a:hover{
+    background-color:$color2 ;
+    font-size: 25px;
+    transition: 0.8s;
+    font-weight:bold;
+    border-radius: 35px;
+}

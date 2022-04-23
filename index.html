@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!-- Estilos de bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+     <link rel="stylesheet" href="./src/css/estilos.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+ 
+     <!-- Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Document</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top navestilos">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="./src/images/logo.png" alt="Logo" width="100px"  height="60px"/></a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-center text-center" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item px-3">
+                    <a class="nav-link text-light"  href="./java.html">Java</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="./juego.html">Javascript</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-light" href="./juego.html">Metodologia Scrum</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-light" href="./juego.html">POO Basico</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-light" href="./juego.html" >Control Versiones</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-light" href="./juego.html" >Estadisticas Jugador</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+     <!-- carousel -->
+
+    <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./src/images/trainnig1.jpg" alt="" width="100%" height="300px">
+            </div>
+            <div class="carousel-item">
+                <img src="./src/images/trainnig1.jpg" alt="" width="100%" height="300px">
+            </div>
+            <div class="carousel-item">
+                <img src="./src/images/trainnig1.jpg" alt="" width="100%" height="300px">
+            </div>
+        </div>
+
+        <!--Controles NEXT y PREV-->
+        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--Controles de indicadores-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel1" data-slide-to="1"></li>
+            <li data-target="#carousel1" data-slide-to="2"></li>
+        </ol>
+
+    </div>
+
+    <main>
+
+         <!-- Cards -->
+
+    <section id="about-boxes" class="about-boxes">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-12 titulocategorias">
+                    <h2>Categorias del juego</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card cardIndex">
+                        <img src="./src/images/java.jpg" class="card-img-top" alt="...">
+                       
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Java</a></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card cardIndex">
+                        <img src="./src/images/java.jpg" class="card-img-top" alt="...">
+                       
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Javascript</a></h5>
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card cardIndex">
+                        <img src="./src/images/java.jpg" class="card-img-top" alt="...">
+                    
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Metodologia Scrum</a></h5>
+                            <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card cardIndex">
+                        <img src="./src/images/java.jpg" class="card-img-top" alt="...">
+                    
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">POO Basico</a></h5>
+                            <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card cardIndex">
+                        <img src="./src/images/java.jpg" class="card-img-top" alt="...">
+                    
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Control Versiones</a></h5>
+                            <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. </p>
+                        </div>
+                    </div>
+                </div>
+               
+                    <div class="card"id="cardestadisticas" >
+                        <h2 class="estadisticasjuego">Instrucciones del juego</h2>
+                        <div class="card-body " >
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card"id="cardestadisticas" >
+                        <h2 class="estadisticasjuego">Estadisticas del juego</h2>
+                        <div class="card-body " >
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+
+  <!-- seccion nosotros -->
+  <section id="about" class="about mt-5">
+    <div class="container">
+    <div class="row">
+       <div class="col-md-6 col-sm-12">
+          <div class="d-flex member">
+            <img class="img-fluid rounded-circle mb-4 px-4" src="./src/images/arley.jpeg" alt="..." width="200px"  height="60px"/>
+             <div class="ps-4">
+                <h4>Doris</h4>
+                <span>Estudiante fullstack</span>
+                <p>Trainning League</p>
+                <div class="d-flex mt-3">
+                   <a href="https://www.facebook.com/brayan.higuita.9/"target="_blank"><i class="bi bi-facebook"></i></a>
+                   <a href="https://www.instagram.com/brayan_hgta/"target="_blank" class="ms-2"><i class="bi bi-instagram"></i></a>
+                   <a href="https://api.whatsapp.com/send?phone=573137878341"target="_blank" class="ms-2"><i class="bi bi-whatsapp"></i></a>
+                </div>
+             </div>
+          </div>
+       </div>
+
+       <div class="col-md-6 col-sm-12">
+        <div class="d-flex member">
+          <img class="img-fluid rounded-circle mb-4 px-4" src="./src/images/arley.jpeg" alt="..." width="200px"  height="60px"/>
+           <div class="ps-4">
+              <h4>Brayan Higuita</h4>
+              <span>Estudiante fullstack</span>
+              <p>Trainning League</p>
+              <div class="d-flex mt-3">
+                 <a href="https://www.facebook.com/brayan.higuita.9/"target="_blank"><i class="bi bi-facebook"></i></a>
+                 <a href="https://www.instagram.com/brayan_hgta/"target="_blank" class="ms-2"><i class="bi bi-instagram"></i></a>
+                 <a href="https://api.whatsapp.com/send?phone=573137878341"target="_blank" class="ms-2"><i class="bi bi-whatsapp"></i></a>
+              </div>
+           </div>
+        </div>
+     </div>
+
+     <div class="col-md-12 col-sm-12 my-4">
+         <div class="solitario3" >
+        <div class="d-flex member">
+          <img class="img-fluid rounded-circle mb-4 px-4" src="./src/images/arley.jpeg" alt="..." width="200px"  height="60px"/>
+           <div class="ps-4">
+              <h4>Brayan Higuita</h4>
+              <span>Estudiante fullstack</span>
+              <p>Trainning League</p>
+              <div class="d-flex mt-3">
+                 <a href="https://www.facebook.com/brayan.higuita.9/"target="_blank"><i class="bi bi-facebook"></i></a>
+                 <a href="https://www.instagram.com/brayan_hgta/"target="_blank" class="ms-2"><i class="bi bi-instagram"></i></a>
+                 <a href="https://api.whatsapp.com/send?phone=573137878341"target="_blank" class="ms-2"><i class="bi bi-whatsapp"></i></a>
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+</div>
+</div>
+
+</section>
+    
+    </main>
+
+<footer>
+    <div class="text-center p-3" >
+        © 2020 Copyright:
+        <a>derechos de autor</a>
+      </div>
+</footer>
+
+
+
+
+    <!-- Script propios -->
+    <script src="./src/app.js" type="module"></script>
+    <!-- Script de bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

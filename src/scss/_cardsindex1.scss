@@ -1,0 +1,35 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    margin-top: 50px;
+    width: 400px;
+    height: auto;
+
+}
+
+
+.card img{
+    height: 180px;
+}
+
+.tarjetas1 h2{
+    text-align: center;
+    margin-top: 50px;
+}
+
+main{
+    padding-top: 30px;
+}
+
+.titulocategorias{
+    text-align: center;
+}
+
+.estadisticasjuego{
+    text-align: center;
+}
+#cardestadisticas{
+    width: 80%;
+    height: auto;
+}
