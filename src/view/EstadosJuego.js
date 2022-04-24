@@ -26,11 +26,11 @@ class EstadosJuego {
                 <div class="col-md-6">
                   <h3>Estadisticas</h3>
                   <p>Score</p>
-                  <button>${score}</button>
+                  <button>Score: ${score}</button>
                   <p>Rondas Superadas</p>
-                  <button>${rondaActual - 2}</button>
+                  <button>Rondas Superadas: ${rondaActual - 2}</button>
                   <p>Estado</p>
-                  <button>Haz perdido</button>
+                  <button>Estado: Haz perdido</button>
                 </div>
               </div>
             </div>
@@ -61,12 +61,12 @@ class EstadosJuego {
                 </div>
                 <div class="col-md-6">
                   <h3>Estadisticas</h3>
-                  <p>Score</p>
-                  <button>${score}</button>
-                  <p>Rondas Superadas</p>
-                  <button>${rondaActual}</button>
-                  <p>Estado</p>
-                  <button>Haz Ganado</button>
+                  
+                  <h3>Score: ${score}</h3>
+                  
+                  <h3>Rondas Superadas: ${rondaActual}</h3>
+                  
+                  <h3>Estado: Haz Ganado</h3>
                 </div>
               </div>
             </div>
@@ -97,12 +97,12 @@ class EstadosJuego {
                 </div>
                 <div class="col-md-6">
                   <h3>Estadisticas</h3>
-                  <p>Score</p>
-                  <button>${score}</button>
-                  <p>Rondas Superadas</p>
-                  <button>${rondaActual - 1}</button>
-                  <p>Estado</p>
-                  <button>Haz Ganado</button>
+                  
+                  <h3>Score: ${score}</h3>
+                  
+                  <h3>Rondas Superadas: ${rondaActual - 1}</h3>
+                  
+                  <h3>Estado: Haz Ganado</h3>
                 </div>
               </div>
             </div>
@@ -116,30 +116,30 @@ class EstadosJuego {
     let contenido = `
       <div class="col-md-12">
               <div class="row">
-                <div class="col-md-6">
+                <div id="imgretirar" class="col-md-6">
                 <img src="./src/images/retiro.gif" alt="">
                 </div>
-                <div class="col-md-6">
+                <div id="textomotivacion" class="col-md-6">
                   <h2>Haz decidido no continuar</h2>
-                  <h3>La vida tiene muchos obstaculos, la idea es superarlos</h3>
-                  <p>No te rindas nunca</p>
+                  <h3>La vida tiene muchos obstáculos, la idea es superarlos</h3>
+                  <p>¡No te rindas nunca!</p>
                 </div>
               </div>
               </div>
               <div class="col-md-12">
               <div class="row">
-                <div class="col-md-6">
+                <div id="avatar" class="col-md-6">
                 <img src="./src/images/avatar.gif" alt="">
-                  <h3>${nombre}</h3>
+                  <h3>Jugador: ${nombre}</h3>
                 </div>
                 <div class="col-md-6">
                   <h3>Estadisticas</h3>
-                  <p>Score</p>
-                  <button>${score}</button>
-                  <p>Rondas Superadas</p>
-                  <button>${rondaActual - 1}</button>
-                  <p>Estado</p>
-                  <button>Te haz retirado</button>
+                  
+                  <h3>Score: ${score}</h3>
+                  
+                  <h3>Rondas Superadas: ${rondaActual - 1}</h3>
+                  
+                  <h3>Estado: Te haz retirado</h3>
                 </div>
               </div>
             </div>

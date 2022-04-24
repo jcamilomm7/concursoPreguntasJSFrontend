@@ -6,6 +6,7 @@ import { premiosObj } from "./data/premiosObj.js";
 import { rondaObj } from "./data/rondasObj.js";
 import { categoriasObj } from "./data/categorias.js";
 import { opcionesObj } from "./data/opcionesObj.js";
+import { mostrarLocal, enviar } from "./localStore/estadisticasJuego.js";
 
 //Modelos a utilizar
 
@@ -16,21 +17,12 @@ import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
 /* import { AlmacenamientoJugador } from "./localStorage/AlmacenamientoJugador.js"; */
 
-
-let nombre = prompt("Ingrese nombre de Jugador");
+let nombre = "Dios"; //prompt("Ingrese nombre de Jugador");
 let jugadores = [];
 
 //Mostrar datos del local storage
 
-function mostrarLocal(){
-  let storeJugadores = localStorage.getItem("localJugadores");
-  if (storeJugadores === null) {
-    jugadores = [];
-  } else {
-    jugadores = JSON.parse(storeJugadores);
-    return jugadores
-  }
-}
+console.log(mostrarLocal());
 
 /* let arrayLocal = mostrarLocal()
 const table = document.querySelector("#table")
@@ -52,8 +44,7 @@ cadena += `<tr>
 
 table.innerHTML = cadena */
 
-
-const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */) => {
+const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
   const buttonretirar = document.querySelector("#buttonretirar");
 
   buttonretirar.addEventListener("click", retiro, false);
@@ -66,8 +57,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */
       false
     );
     estado.retirarseJuego(premiosObj.score, rondaObj.rondaActual, nombre);
-
-    
+    enviar(jugador);
   }
 
   //Si gana el juego entra aca
@@ -80,8 +70,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */
       premiosObj.score,
       true
     );
-    jugadores.push(jugador);
-    localStorage.setItem("localJugadores", JSON.stringify(jugadores));
+    enviar(jugador);
   } else if (opcionesObj.perder == true) {
     premiosObj.score = 0;
     estado.perderJuego(premiosObj.score, rondaObj.rondaActual, nombre);
@@ -91,13 +80,10 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */
       premiosObj.score,
       false
     );
-    jugadores.push(jugador);
-    localStorage.setItem("localJugadores", JSON.stringify(jugadores));
-  
-  
+    enviar(jugador);
     //Hasta aca haciendo pruebas
   } else {
-    contenidoIzq.cargarLogo("./src/images/logo-sofkau.webp", "Sofka U");
+    contenidoIzq.cargarLogo("./src/images/logoSofka.png", "Sofka U");
 
     rondaObj.numerorondas(preguntasObj);
 
@@ -132,7 +118,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */
       rondaObj.round();
       opcionesObj.perderJuego(opcionSeleccionada, correcta); // Se utiliza el metodo para saber si la respuesta fue correcta
 
-      renderPage(juego, contenidoIzq, javaJuego, estado, /* almacenamiento */); //Renderiza permanente mente el DOM
+      renderPage(juego, contenidoIzq, javaJuego, estado); //Renderiza permanente mente el DOM
     });
   }
 };
@@ -141,9 +127,8 @@ function main() {
   const contenidoIzq = new ContenidoIzq();
   const javaJuego = new JavaJuego();
   const estado = new EstadosJuego();
-/*   const almacenamiento = new AlmacenamientoJugador(); */
 
-  renderPage(juego, contenidoIzq, javaJuego, estado, /* almacenamiento */);
+  renderPage(juego, contenidoIzq, javaJuego, estado);
 }
 
 main();

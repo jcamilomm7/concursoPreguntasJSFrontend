@@ -2,7 +2,7 @@ import {Categoria} from "../models/Categoria.js"
 
 export const categorias = [
   {
-    categoria: "Conceptos generales",
+    categoria: "Conceptos Generales",
     numeroPreguntas: 0,
 
   },

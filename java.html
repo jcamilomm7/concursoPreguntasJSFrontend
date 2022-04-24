@@ -11,6 +11,12 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Grape+Nuts&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -21,23 +27,24 @@
           <div class="reglas"></div>
           <div class="containerRondas">
             <div class="row">
-              <div class="col-md-6">
-                <h3 id="rondaDin"></h3>
+              <div id="rondaDin" class="col-md-6">
+                <h3></h3>
               </div>
-              <div class="col-md-6">
-                <h3 id="premioDin"></h3>
+              <div id="premioDin" class="col-md-6">
+                <h3></h3>
               </div>
             </div>
           </div>
           <div class="containercampeon">
             <div>
-              <h2 id="premiocampeon">$1'000.000</h2>
+              <h2></h2>
+              <h2 id="premiocampeon">Bonus $1'000.000</h2>
             </div>
           </div>
         </div>
         <div class="col-md-8">
           <div class="bienvenido">
-            <h1>BIENVENIDOS SOFKIANOS</h1>
+            <h1>¡¡¡BIENVENIDOS SOFKIANOS!!!</h1>
           </div>
           <div class="frases">
             <h2>El desafío es contigo</h2>
@@ -45,38 +52,40 @@
 
           <div class="containerJuego">
             <div class="row borrarinformacion">
-              <div class="col-md-12 tema">
-                <h2 id="temacategoria">basico</h2>
+              <div id="temacategoria" class="col-md-12 tema">
+                <h2>basico</h2>
               </div>
               <!-- Empieza la parte dinamica -->
-            
+
               <div class="col-md-8">
                 <div class="pregunta">
                   <h2 id="pregunta"></h2>
                 </div>
-                <div class="numeropreguntas">
-                  <h2 id="relacion">2/5</h2>
+                <div id="relacion" class="numeropreguntas">
+                  <h2>2/5</h2>
                 </div>
                 <div class="containerOpciones">
                   <div class="row">
-                    <div id="respuestasCol1" class="col-md-6"></div>
-                    <div id="respuestasCol2" class="col-md-6"></div>
+                    <div id="respuestasCol1" class="col-md-12"></div>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
-                <h1>Estadísticas</h1>
-                <form>
-                  <label for="jugador">Nombre</label>
-                  <input id="jugador" type="text" name="Jugador" />
-                  <label for="ronda">Ronda N°</label>
-                  <input id="ronda" type="text" name="Ronda" />
-                  <label for="premio">Premio</label>
-                  <input id="premio" type="text" name="Premio" />
-                  <label for="score">Score</label>
-                  <input id="score" type="text" name="Score" />
-                  <input id="buttonretirar" type="submit" value="Retirarse" />
-                </form>
+                <div id="estadistica">
+                  <h1>Estadísticas</h1>
+
+                  <h3 id="jugador"></h3>
+
+                  <h3 id="ronda"></h3>
+
+                  <h3 id="premio"></h3>
+
+                  <h3 id="score"></h3>
+
+                  <div id="retirarboton">
+                    <input id="buttonretirar" type="submit" value="Retirarse" />
+                  </div>
+                </div>
               </div>
               <!-- Aca termina la parte dinamica -->
             </div>
@@ -86,11 +95,7 @@
       </div>
     </div>
 
-    <table border="1" id="table">
-      
-     
-      
-    </table>
+    <table border="1" id="table"></table>
 
     <script src="./src/app.js" type="module"></script>
   </body>

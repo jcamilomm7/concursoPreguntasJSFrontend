@@ -4,46 +4,46 @@ export const preguntas = [
     {
       pregunta: "¿Qué es JAVA?",
       respuestas: [
-        "una clase",
-        "un objeto",
-        "un pilar fundamental de poo",
-        "es un lenguaje de programación de alto nivel, multi-plataforma",
+        "Una clase",
+        "Un objeto",
+        "Un pilar fundamental de POO",
+        "Es un lenguaje de programación de alto nivel, multi-plataforma",
       ],
       correcta:
-        "es un lenguaje de programación de alto nivel, multi-plataforma",
+        "Es un lenguaje de programación de alto nivel, multi-plataforma",
     },
     {
-      pregunta: "Cuáles son los pilares de POO",
+      pregunta: "¿Cuáles son los pilares de POO?",
       respuestas: [
-        "Constructor,metodo",
-        "Encapsulamiento,polimorfismo,herencia,abstraccion",
-        "polimorfismo,herencia,atributo,metodo",
-        "abstraer,metodo,herencia",
+        "Constructor, método",
+        "Encapsulamiento, polimorfismo, herencia, abstracción",
+        "Polimorfismo, herencia, atributo, método",
+        "abstraer, método, herencia",
       ],
-      correcta: "Encapsulamiento,polimorfismo,herencia,abstraccion",
+      correcta: "Encapsulamiento, polimorfismo, herencia, abstracción",
     },
     {
-      pregunta: "Qué significa IDE de Java",
+      pregunta: "¿Qué significa IDE de Java?",
       respuestas: [
         "Entorno de desarrollo integrado",
         "Entorno de desarrollo compilado",
-        "inspeccion de software",
+        "Inspeccion de software",
         "Entorno integrado",
       ],
       correcta: "Entorno de desarrollo integrado",
     },
     {
-      pregunta: "Qué es una variable en java",
+      pregunta: "¿Qué es una variable en Java?",
       respuestas: [
         "Es un espacio en memoria donde se guarda un dato",
-        "es aquello que tiene un valor estatico",
-        "es algo que puede variar",
-        "es un compilador que guardan datos",
+        "Es aquello que tiene un valor estático",
+        "Es algo que puede variar",
+        "Es un compilador que guardan datos",
       ],
       correcta: "Es un espacio en memoria donde se guarda un dato",
     },
     {
-      pregunta: "Que tipos de datos primitivos existen en java",
+      pregunta: "¿Qué tipos de datos primitivos existen en Java?",
       respuestas: [
         "int, short, long, double, float, boolean, byte, char",
         "int, short, long, double, byte, char",
@@ -53,12 +53,12 @@ export const preguntas = [
       correcta: "int, short, long, double, float, boolean, byte, char",
     },
     {
-      pregunta: "¿Que es una constante en java?",
+      pregunta: "¿Qué es una constante en Java?",
       respuestas: [
         "Es un dato cuyo valor no cambia durante la ejecución del programa",
         "Es un dato cuyo valor que cambia durante la ejecución del programa",
         "Es un dato cuyo valor no cambia si la instanciamos",
-        "Una constante es igual a una variable estatica",
+        "Una constante es igual a una variable estática",
       ],
       correcta:
         "Es un dato cuyo valor no cambia durante la ejecución del programa",
@@ -67,17 +67,17 @@ export const preguntas = [
   //Categoria 2
   [
     {
-      pregunta: "Declaraciones de condicionales validos en java de Java",
+      pregunta: "Declaraciones de condicionales válidos en Java",
       respuestas: [
-        "if,if-else,switch-case",
-        "Class,switch-case,if",
-        "while,for,if",
-        "if,if-else,do-while",
+        "if, if-else, switch-case",
+        "Class, switch-case, if",
+        "while, for, if",
+        "if, if-else, do-while",
       ],
-      correcta: "if,if-else,switch-case",
+      correcta: "if, if-else, switch-case",
     },
     {
-      pregunta: "Qué tarea realiza una estructura de decisión?",
+      pregunta: "¿Qué tarea realiza una estructura de decisión?",
       respuestas: [
         "Realiza la repetición de tareas",
         "Evalúan una condición o pregunta y según su resultado toma un camino de acción.",
@@ -88,22 +88,22 @@ export const preguntas = [
         "Evalúan una condición o pregunta y según su resultado toma un camino de acción.",
     },
     {
-      pregunta: "Cuál de las siguientes NO es una estructura condicional?",
+      pregunta: "¿Cuál de las siguientes NO es una estructura condicional?",
       respuestas: ["if", "while", "switch", "else-if"],
       correcta: "while",
     },
     {
-      pregunta: "Que hace este codigo: if(num <= 10)?",
+      pregunta: "¿Qué hace este codigo: if(num <= 10)?",
       respuestas: [
-        "Pregunta si un número es mayor que 10",
-        "Pregunta si un número es igual a 10",
-        "Pregunta si un número es diferente de 10",
-        "Pregunta si un número es menor o igual que 10",
+        "Pregunta sí un número es mayor que 10",
+        "Pregunta sí un número es igual a 10",
+        "Pregunta sí un número es diferente de 10",
+        "Pregunta sí un número es menor o igual que 10",
       ],
-      correcta: "Pregunta si un número es menor o igual que 10",
+      correcta: "Pregunta sí un número es menor o igual que 10",
     },
     {
-      pregunta: "Cuándo es preferible usar una instrucción del tipo switch",
+      pregunta: "¿Cuándo es preferible usar una instrucción del tipo switch?",
       respuestas: [
         "Cuando debemos evaluar solamente una condición",
         "Cuando debemos evaluar primero una condición y luego podemos evaluar una segunda condición",
@@ -117,14 +117,14 @@ export const preguntas = [
   //Categoria 3
   [
     {
-      pregunta: "¿Cuando es preferible usar una estructura repetitiva for?",
+      pregunta: "¿Cuándo es preferible usar una estructura repetitiva for?",
       respuestas: [
-        "Cuando si sabemos cuantas repeticiones deben hacerse",
+        "Cuando sí sabemos cuantas repeticiones deben hacerse",
         "Cuando tenemos una clase anidada",
         "Cuando hay un if de por medio ",
-        "Repuesta1 y respuesta2 son verdaderas ",
+        "Repuesta 1 y respuesta 2 son verdaderas ",
       ],
-      correcta: "Cuando si sabemos cuantas repeticiones deben hacerse",
+      correcta: "Cuando sí sabemos cuantas repeticiones deben hacerse",
     },
     {
       pregunta: "¿Qué es el ciclo while?",
@@ -132,39 +132,39 @@ export const preguntas = [
         "Cuando si sabemos cuantas repeticiones deben hacerse",
         "Es aquel nos permite ejecutar varias líneas de código",
         "Es aquel nos permite ejecutar varias líneas de código de manera repetitiva sin necesidad de tener un valor inicial",
-        "Repuesta1 y respuesta2 son verdaderas ",
+        "Repuesta 1 y respuesta 2 son verdaderas ",
       ],
       correcta:
         "Es aquel nos permite ejecutar varias líneas de código de manera repetitiva sin necesidad de tener un valor inicial",
     },
     {
-      pregunta: "¿Que es un ciclo en java?",
+      pregunta: "¿Qué es un ciclo en java?",
       respuestas: [
         "Es aquel que permite repetir una o varias instrucciones cuantas veces lo necesitemos",
         "Es aquel nos permite ejecutar acciones",
-        "Respuesta1 solo es correcta",
-        "Repuesta1 y respuesta2 son verdaderas ",
+        "Respuesta 1 sólo es correcta",
+        "Repuesta 1 y respuesta 2 son verdaderas ",
       ],
       correcta:
         "Es aquel que permite repetir una o varias instrucciones cuantas veces lo necesitemos",
     },
     {
-      pregunta: "¿Cuantas partes tiene el ciclo for?",
+      pregunta: "¿Cuántas partes tiene el ciclo for?",
       respuestas: [
-        "inicio del ciclo,condicion,incremento",
-        "inicio,fin",
-        "Respuesta1 solo es correcta",
-        "Repuesta1 y respuesta2 son verdaderas ",
+        "Inicio del ciclo, condicion, incremento",
+        "Inicio,fin",
+        "Respuesta 1 solo es correcta",
+        "Repuesta 1 y respuesta 2 son verdaderas ",
       ],
-      correcta: "inicio del ciclo,condicion,incremento",
+      correcta: "Inicio del ciclo, condicion, incremento",
     },
     {
       pregunta: "¿Podemos utilizar ciclos para sumar dos numeros?",
       respuestas: [
         "Si",
         "No",
-        "Respuesta1 y respuesta2 son correcta",
-        "Respuesta2 es verdadera",
+        "Respuesta 1 y respuesta 2 son correcta",
+        "Respuesta 2 es verdadera",
       ],
       correcta: "Si",
     },
@@ -182,7 +182,7 @@ export const preguntas = [
       correcta: "Vectores o matrices",
     },
     {
-      pregunta: "Define que es un arreglo en programación",
+      pregunta: "Define qué es un arreglo en programación",
       respuestas: [
         "Es el elemento del lenguaje que nos permite guardar un valor",
         "Es aquel elemento del lenguaje que nos permite agrupar un conjunto de valores del mismo tipo",
@@ -193,7 +193,7 @@ export const preguntas = [
         "Es aquel elemento del lenguaje que nos permite agrupar un conjunto de valores del mismo tipo",
     },
     {
-      pregunta: "el recorrido de un arreglo en Java requiere?",
+      pregunta: "¿El recorrido de un arreglo en Java requiere?",
       respuestas: [
         "Un ciclo For",
         "una sentencia If",
@@ -243,7 +243,7 @@ export const preguntas = [
       respuestas: [
         "En una instrucción que se da al IDE",
         "Es un modelo o plantilla",
-        "Es una clase que indica solamente los métodos peo no la implementación de éstos",
+        "Es una clase que indica solamente los métodos pero no la implementación de éstos",
         "Es la instanciación de un objeto",
       ],
       correcta:
@@ -251,7 +251,7 @@ export const preguntas = [
     },
     {
       pregunta:
-        "Es la forma de proteger u ocultar las propiedades de un objetos, estableciendo los permisos y niveles de visibilidad. Lo anterior hacer referencia a:",
+        "Es la forma de proteger u ocultar las propiedades de un objeto.",
       respuestas: [
         "Polimorfismo",
         "Herencia",

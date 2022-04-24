@@ -1,30 +1,63 @@
-.imagen{
-    border: 5px solid black;
-    a{
-        img{
-            width:80%;
-            margin-left: 10%;
-            height: 80px;
-        }
-
+.imagen {
+  // border: 5px solid black;
+  a {
+    img {
+      width: 90%;
+      margin-left: 10%;
+      height: 120px;
+      margin-top: 60px;
     }
+  }
 }
 
-.containercampeon{
-    background-image: url("../images/starfall-gif-67.gif");
-    padding-top: 70px;
-    width: 80%;
-    height: 300px;
-    text-align: center;
-    justify-content: center;
-    
+#rondaDin {
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 1000;
+  font-family: "Caveat", cursive;
+  text-shadow: 3px 5px 5px #080808;
+  color: rgb(239, 122, 14);
 
-    h2{
-        margin-top: 75px;
-        margin-left: 70px;
-        font-size: 60px;
+  // h3{
 
-    }
-    
-
+  // }
 }
+
+#premioDin {
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 1000;
+  font-family: "Caveat", cursive;
+  text-shadow: 5px 5px 5px;
+  color: rgb(200, 17, 32);
+
+  // h3{
+
+  // }
+}
+
+.containercampeon {
+  background-image: url("../images/starfall-gif-67.gif");
+  padding-top: 70px;
+  width: 80%;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+
+  h2 {
+    margin-top: 5px;
+    margin-left: 40px;
+    font-size: 80px;
+    font-family: "Caveat", cursive;
+    text-shadow: 5px 5px 5px;
+    font-weight: 500;
+  }
+}
+
+
+
+
