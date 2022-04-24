@@ -1,4 +1,3 @@
-//@ts-check
 
 //importamos todos los objetos que se requieren utilizar
 import { preguntasObj } from "./data/preguntasObj.js";
@@ -15,14 +14,23 @@ import { ContenidoIzq } from "./view/ContenidoIzq.js";
 import { JavaJuego } from "./view/JavaJuego.js";
 import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
-/* import { AlmacenamientoJugador } from "./localStorage/AlmacenamientoJugador.js"; */
 
-let nombre = "Dios"; //prompt("Ingrese nombre de Jugador");
-let jugadores = [];
+//Llamar nombre del localStorage
+function localNombreJugador(){
+  let storeNombreJugador = localStorage.getItem("localNombreJugador");
+  if (storeNombreJugador === null) {
+    storeNombreJugador = {};
+  } else {
+    storeNombreJugador = JSON.parse(storeNombreJugador);
+    return storeNombreJugador
+  }
+}
+let nombre =  localNombreJugador().nombre; 
+
 
 //Mostrar datos del local storage
 
-console.log(mostrarLocal());
+/* console.log(mostrarLocal()); */
 
 /* let arrayLocal = mostrarLocal()
 const table = document.querySelector("#table")

@@ -436,4 +436,17 @@ footer div {
   font-weight: 500;
 }
 
+.register2-bg {
+  background-image: url("../images/ct.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .register2-bg {
+    min-height: 50vh;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
