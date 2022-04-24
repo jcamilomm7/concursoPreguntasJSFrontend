@@ -14,17 +14,60 @@ import { ContenidoIzq } from "./view/ContenidoIzq.js";
 import { JavaJuego } from "./view/JavaJuego.js";
 import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
-import { AlmacenamientoJugador } from "./localStorage/AlmacenamientoJugador.js";
+/* import { AlmacenamientoJugador } from "./localStorage/AlmacenamientoJugador.js"; */
+
 
 let nombre = prompt("Ingrese nombre de Jugador");
+let jugadores = [];
 
-const renderPage = (juego, contenidoIzq, javaJuego, estado, almacenamiento) => {
+//Mostrar datos del local storage
+
+function mostrarLocal(){
+  let storeJugadores = localStorage.getItem("localJugadores");
+  if (storeJugadores === null) {
+    jugadores = [];
+  } else {
+    jugadores = JSON.parse(storeJugadores);
+    return jugadores
+  }
+}
+
+/* let arrayLocal = mostrarLocal()
+const table = document.querySelector("#table")
+let cadena = `<tr>
+<td>Nombre</td>
+<td>score</td>
+<td>Ronda superada</td>
+<td>victoria</td>
+</tr>`
+arrayLocal.map((jugador)=> {
+cadena += `<tr>
+<td>${jugador.nombre}</td>
+<td>${jugador.score}</td>
+<td>${jugador.rondaSuperada}</td>
+<td>${jugador.victoria}</td>
+</tr>
+`
+})
+
+table.innerHTML = cadena */
+
+
+const renderPage = (juego, contenidoIzq, javaJuego, estado, /* almacenamiento */) => {
   const buttonretirar = document.querySelector("#buttonretirar");
 
   buttonretirar.addEventListener("click", retiro, false);
 
   function retiro() {
+    const jugador = new Jugador(
+      nombre,
+      rondaObj.rondaActual - 1,
+      premiosObj.score,
+      false
+    );
     estado.retirarseJuego(premiosObj.score, rondaObj.rondaActual, nombre);
+
+    
   }
 
   //Si gana el juego entra aca
@@ -37,6 +80,8 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, almacenamiento) => {
       premiosObj.score,
       true
     );
+    jugadores.push(jugador);
+    localStorage.setItem("localJugadores", JSON.stringify(jugadores));
   } else if (opcionesObj.perder == true) {
     premiosObj.score = 0;
     estado.perderJuego(premiosObj.score, rondaObj.rondaActual, nombre);
@@ -46,10 +91,11 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, almacenamiento) => {
       premiosObj.score,
       false
     );
-    almacenamiento.guardar(jugador);
-
-    almacenamiento.mostrar();
-    console.log(almacenamiento.mostrar());
+    jugadores.push(jugador);
+    localStorage.setItem("localJugadores", JSON.stringify(jugadores));
+  
+  
+    //Hasta aca haciendo pruebas
   } else {
     contenidoIzq.cargarLogo("./src/images/logo-sofkau.webp", "Sofka U");
 
@@ -86,7 +132,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado, almacenamiento) => {
       rondaObj.round();
       opcionesObj.perderJuego(opcionSeleccionada, correcta); // Se utiliza el metodo para saber si la respuesta fue correcta
 
-      renderPage(juego, contenidoIzq, javaJuego, estado, almacenamiento); //Renderiza permanente mente el DOM
+      renderPage(juego, contenidoIzq, javaJuego, estado, /* almacenamiento */); //Renderiza permanente mente el DOM
     });
   }
 };
@@ -95,10 +141,9 @@ function main() {
   const contenidoIzq = new ContenidoIzq();
   const javaJuego = new JavaJuego();
   const estado = new EstadosJuego();
+/*   const almacenamiento = new AlmacenamientoJugador(); */
 
-  const almacenamiento = new AlmacenamientoJugador();
-
-  renderPage(juego, contenidoIzq, javaJuego, estado, almacenamiento);
+  renderPage(juego, contenidoIzq, javaJuego, estado, /* almacenamiento */);
 }
 
 main();
