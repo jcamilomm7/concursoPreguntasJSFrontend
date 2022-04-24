@@ -23,7 +23,7 @@ export const preguntas = [
       correcta: "Encapsulamiento, polimorfismo, herencia, abstracción",
     },
     {
-      pregunta: "¿Qué significa IDE de Java?",
+      pregunta: "¿Qué significa IDE?",
       respuestas: [
         "Entorno de desarrollo integrado",
         "Entorno de desarrollo compilado",
@@ -215,7 +215,7 @@ export const preguntas = [
     },
     {
       pregunta:
-        "Es un conjunto finito de espacios de memoria identificados con un mismo nombre e indexados",
+        "Conjunto de datos de un mismo tipo almacenados en memoria.",
       respuestas: ["Variable", "Funciones", "Arreglos", "Condicionales"],
       correcta: "Arreglos",
     },
