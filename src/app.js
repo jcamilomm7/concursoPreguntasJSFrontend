@@ -13,10 +13,12 @@ import { Juego } from "./models/Juego.js";
 import { ContenidoIzq } from "./view/ContenidoIzq.js";
 import { JavaJuego } from "./view/JavaJuego.js";
 import { EstadosJuego } from "./view/EstadosJuego.js";
+import { Jugador } from "./models/Jugador.js";
+import { AlmacenamientoJugador } from "./localStorage/AlmacenamientoJugador.js";
 
 let nombre = prompt("Ingrese nombre de Jugador");
 
-const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
+const renderPage = (juego, contenidoIzq, javaJuego, estado, almacenamiento) => {
   const buttonretirar = document.querySelector("#buttonretirar");
 
   buttonretirar.addEventListener("click", retiro, false);
@@ -26,31 +28,38 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
   }
 
   //Si gana el juego entra aca
+
   if (juego.finJuego()) {
     estado.ganarJuego(premiosObj.score, rondaObj.rondaActual, nombre);
+    const jugador = new Jugador(
+      nombre,
+      rondaObj.rondaActual - 1,
+      premiosObj.score,
+      true
+    );
   } else if (opcionesObj.perder == true) {
     premiosObj.score = 0;
     estado.perderJuego(premiosObj.score, rondaObj.rondaActual, nombre);
+    const jugador = new Jugador(
+      nombre,
+      rondaObj.rondaActual - 2,
+      premiosObj.score,
+      false
+    );
+    almacenamiento.guardar(jugador);
+
+    almacenamiento.mostrar();
+    console.log(almacenamiento.mostrar());
   } else {
     contenidoIzq.cargarLogo("./src/images/logo-sofkau.webp", "Sofka U");
 
     rondaObj.numerorondas(preguntasObj);
 
-    console.log(categoriasObj[rondaObj.rondaActual - 1].categoria); //Nombre de la categoria
-
     javaJuego.temaCategoria(categoriasObj[rondaObj.rondaActual - 1].categoria);
-
-    console.log(rondaObj.numeroRondas); //Numero total de rondas
-
-    console.log(premiosObj.score); //Puntaje acumulado
-
-    console.log(rondaObj.rondaActual); //Ronda actual
 
     javaJuego.relacionPreguntas(rondaObj.rondaActual, rondaObj.numeroRondas);
 
     const respuesta = juego.preguntaAlAzar(preguntasObj); //Almacenamos la pregunta al azar en variable
-
-    console.log(juego.alazar, juego.cantidadPreguntas); // pregunta al azar y el total de las preguntas de la categoria
 
     const { pregunta, respuestas, correcta } = respuesta; //Destructuramos el objeto pregunta al azar
 
@@ -77,7 +86,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
       rondaObj.round();
       opcionesObj.perderJuego(opcionSeleccionada, correcta); // Se utiliza el metodo para saber si la respuesta fue correcta
 
-      renderPage(juego, contenidoIzq, javaJuego, estado); //Renderiza permanente mente el DOM
+      renderPage(juego, contenidoIzq, javaJuego, estado, almacenamiento); //Renderiza permanente mente el DOM
     });
   }
 };
@@ -87,7 +96,9 @@ function main() {
   const javaJuego = new JavaJuego();
   const estado = new EstadosJuego();
 
-  renderPage(juego, contenidoIzq, javaJuego, estado);
+  const almacenamiento = new AlmacenamientoJugador();
+
+  renderPage(juego, contenidoIzq, javaJuego, estado, almacenamiento);
 }
 
 main();
