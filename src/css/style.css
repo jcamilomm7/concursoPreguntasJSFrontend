@@ -12,6 +12,23 @@ $color2: red */
   border-radius: 35px;
 }
 
+#tex1 {
+  font-size: 32px;
+  font-weight: 1000;
+  font-family: "Caveat", cursive;
+}
+
+#tex2 {
+  font-size: 32px;
+  font-weight: 1000;
+  font-family: "Caveat", cursive;
+}
+
+#textCategoria {
+  font-size: 25px;
+  font-weight: 1000;
+}
+
 @keyframes cambio {
   0% {
     margin-left: 0;
@@ -73,11 +90,21 @@ main {
 
 .estadisticasjuego {
   text-align: center;
+  font-size: 25px;
+  font-weight: 1000;
 }
 
 #cardestadisticas {
-  width: 80%;
+  width: 70%;
   height: auto;
+}
+
+.card-title {
+  color: black;
+}
+
+#textcat {
+  margin-top: 12px;
 }
 
 .row1 {
@@ -187,7 +214,7 @@ footer div {
   font-weight: 500;
 }
 
-body {
+.body {
   overflow: hidden;
 }
 

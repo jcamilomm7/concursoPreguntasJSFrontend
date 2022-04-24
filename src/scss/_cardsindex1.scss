@@ -5,6 +5,7 @@
     margin-top: 50px;
     width: 400px;
     height: auto;
+    
 
 }
 
@@ -28,8 +29,19 @@ main{
 
 .estadisticasjuego{
     text-align: center;
+    font-size: 25px;
+    font-weight: 1000;
 }
 #cardestadisticas{
-    width: 80%;
+    width: 70%;
     height: auto;
+}
+.card-title{
+    color: black;
+   
+    
+}
+#textcat{
+    margin-top: 12px;
+
 }
