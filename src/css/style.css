@@ -437,7 +437,7 @@ footer div {
 }
 
 .register2-bg {
-  background-image: url("../images/ct.jpg");
+  background-image: url("../images/registro.webp");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -445,6 +445,18 @@ footer div {
 
 @media (max-width: 1200px) {
   .register2-bg {
+    min-height: 50vh;
+  }
+}
+.register3-bg {
+  background-image: url("../images/ct.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .register3-bg {
     min-height: 50vh;
   }
 }

@@ -1,11 +1,11 @@
-
 //importamos todos los objetos que se requieren utilizar
 import { preguntasObj } from "./data/preguntasObj.js";
 import { premiosObj } from "./data/premiosObj.js";
 import { rondaObj } from "./data/rondasObj.js";
 import { categoriasObj } from "./data/categorias.js";
 import { opcionesObj } from "./data/opcionesObj.js";
-import { mostrarLocal, enviar } from "./localStore/estadisticasJuego.js";
+import { enviar } from "./localStore/estadisticasJuego.js";
+import { guardarEstadisticas } from "./data/registroEstadisticas.js";
 
 //Modelos a utilizar
 
@@ -16,17 +16,16 @@ import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
 
 //Llamar nombre del localStorage
-function localNombreJugador(){
+function localNombreJugador() {
   let storeNombreJugador = localStorage.getItem("localNombreJugador");
   if (storeNombreJugador === null) {
     storeNombreJugador = {};
   } else {
     storeNombreJugador = JSON.parse(storeNombreJugador);
-    return storeNombreJugador
+    return storeNombreJugador;
   }
 }
-let nombre =  localNombreJugador().nombre; 
-
+let nombre = localNombreJugador().nombre;
 
 //Mostrar datos del local storage
 
@@ -65,7 +64,9 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
       false
     );
     estado.retirarseJuego(premiosObj.score, rondaObj.rondaActual, nombre);
+    guardarEstadisticas(jugador);
     enviar(jugador);
+    
   }
 
   //Si gana el juego entra aca
@@ -79,6 +80,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
       true
     );
     enviar(jugador);
+    guardarEstadisticas(jugador);
   } else if (opcionesObj.perder == true) {
     premiosObj.score = 0;
     estado.perderJuego(premiosObj.score, rondaObj.rondaActual, nombre);
@@ -89,6 +91,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
       false
     );
     enviar(jugador);
+    guardarEstadisticas(jugador);
     //Hasta aca haciendo pruebas
   } else {
     contenidoIzq.cargarLogo("./src/images/logoSofka.png", "Sofka U");
