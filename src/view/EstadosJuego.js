@@ -32,6 +32,22 @@ class EstadosJuego {
             </div>
       `;
     contenedorEstados.innerHTML = contenido;
+    const agregarButton = document.querySelector("#agregarbutton")
+    agregarButton.innerHTML = `
+    <a href="./index.html"><button
+    class="btnfinjuego"
+    id="historicopersonal"
+    variant="success"
+    >Salir</button></a>
+
+          </button>
+
+  <a href="./java.html"> <button
+    class="btnfinjuego"
+   id="historicopersonal"
+    variant="success"
+   >Volver a jugar</button></a>
+    `
   }
 
   ganarJuego(score, rondaActual, nombre) {
@@ -69,6 +85,22 @@ class EstadosJuego {
       </div>
       `;
     contenedorEstados.innerHTML = contenido;
+    const agregarButton = document.querySelector("#agregarbutton")
+    agregarButton.innerHTML = `
+    <a href="./index.html"><button
+    class="btnfinjuego"
+    id="historicopersonal"
+    variant="success"
+    >Salir</button></a>
+
+          </button>
+
+  <a href="./java.html"> <button
+    class="btnfinjuego"
+   id="historicopersonal"
+    variant="success"
+   >Volver a jugar</button></a>
+    `
   }
   
   retirarseJuego(score, rondaActual, nombre) {
@@ -106,6 +138,22 @@ class EstadosJuego {
       </div>
       `;
     contenedorEstados.innerHTML = contenido;
+    const agregarButton = document.querySelector("#agregarbutton")
+    agregarButton.innerHTML = `
+    <a href="./index.html"><button
+    class="btnfinjuego"
+    id="historicopersonal"
+    variant="success"
+    >Salir</button></a>
+
+          </button>
+
+  <a href="./java.html"> <button
+    class="btnfinjuego"
+   id="historicopersonal"
+    variant="success"
+   >Volver a jugar</button></a>
+    `
   }
 }
 
