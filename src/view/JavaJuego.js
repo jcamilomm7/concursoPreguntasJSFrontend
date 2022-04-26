@@ -4,14 +4,16 @@ class JavaJuego {
     temaCategoria.textContent = `Categoría: ${nombreCategoria}`;
   }
 
+
+  //debe llegar el juego.index, que es la pregunta alazar
   cargarPreguntaAlAzar(pregunta) {
     const preguntaAzar = document.querySelector("#pregunta");
     preguntaAzar.textContent = pregunta;
   }
 
-  relacionPreguntas(rondaActual, totalRondas) {
+  relacionPreguntas(index,totalRondas) {
     const relacion = document.querySelector("#relacion");
-    relacion.textContent = `Pregunta ${rondaActual}/${totalRondas} en total`;
+    relacion.innerHTML= `<h2>Pregunta ${index}/${totalRondas} en total</h2>`;
   }
 
   mostrarOpciones(respuestas, callback) {

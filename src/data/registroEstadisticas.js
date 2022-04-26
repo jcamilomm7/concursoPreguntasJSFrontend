@@ -27,21 +27,6 @@ export function guardarEstadisticas(data) {
 }
 
 
-/* export function registroEstadisticas(estadisticasJugador){ */
- 
-/*   localStorage.setItem('localNombreJugador',JSON.stringify(estadisticasJugador)) */
-
- /*  const login = async () => {
-      const result = await signUpApi(nombreJugador);
-      if(result === undefined){
-          window.location.href = "/java.html";
-      }else{
-          console.log("No puedes ingresar, debes registrarte");
-      }
-  }
-  login()
-  
-}  */
 
 
 

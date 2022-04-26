@@ -87,6 +87,13 @@ fetch(url)
        tablePersonal.innerHTML = ""
        contador2 = 0
    }
+
+   const btnBorrar = document.querySelector("#btnborrar")
+   btnBorrar.addEventListener("click",borrar,false)
+
+   function borrar(){
+     tablePersonal.innerHTML=""
+   }
   }
 })
      

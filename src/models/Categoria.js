@@ -1,5 +1,6 @@
-import { preguntasObj } from "../data/preguntasObj.js";
 
+let storeJugadores = localStorage.getItem("localPreguntas");
+let preguntasObj = JSON.parse(storeJugadores);
 class Categoria {
   /**
    *

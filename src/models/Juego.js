@@ -13,8 +13,12 @@ class Juego {
     this.preguntasObj = preguntasObj; //Apenas inicie le juego no hay necesidad de instanciar, ya estan listos
   }
 
+  retornarPreguntaAlazar() {
+    return this.alazar;
+  }
+
   //Este metodo me seleccion alazar una pregunta de cada categoria
-  randomPreguntas(categoria) {  
+  randomPreguntas(categoria) {
     let indiceAleatorio = Math.floor(Math.random() * categoria.length);
     if (indiceAleatorio === 0) {
       indiceAleatorio++;
@@ -31,6 +35,10 @@ class Juego {
     return preguntaAlAzar;
   }
 
+  entregaIndicePreguntaAlazar() {
+    return this.alazar;
+  }
+
   //Saber cuando termina el quiz
   finJuego() {
     return this.preguntasObj.length === this.categoriaIndex;
@@ -41,8 +49,8 @@ class Juego {
     this.categoriaIndex++;
     if (opcionSeleccionada === correcta) {
       return true;
-    } 
-      return false;
+    }
+    return false;
   }
 }
 export { Juego };

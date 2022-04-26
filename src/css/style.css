@@ -508,6 +508,19 @@ footer div {
   font-weight: 500;
 }
 
+.btnbuscarborrar {
+  background-color: #45A29E;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btnbuscarborrar:hover {
+  background-color: #66FCF1;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
 .estilosbutton:hover {
   background-color: #66FCF1;
   font-size: 20px;
@@ -541,6 +554,7 @@ footer div {
 }
 
 #buscarestadisticas {
+  margin-left: 12%;
   width: 50%;
   height: 45px;
   border-radius: 15px;
@@ -557,15 +571,14 @@ footer div {
 
 #tablepersonal {
   margin-left: 10%;
-  width: 45%;
+  width: 80%;
   margin-top: 50px;
   text-align: center;
   justify-content: center;
 }
 
 #table2 {
-  margin-left: 10%;
-  width: 45%;
+  width: 100%;
   margin-top: 50px;
   text-align: center;
   justify-content: center;

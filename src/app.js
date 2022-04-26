@@ -1,19 +1,24 @@
 //importamos todos los objetos que se requieren utilizar
-import { preguntasObj } from "./data/preguntasObj.js";
+/* import { preguntasObj } from "./data/questionsObj.js" */
 import { premiosObj } from "./data/premiosObj.js";
 import { rondaObj } from "./data/rondasObj.js";
 import { categoriasObj } from "./data/categorias.js";
 import { opcionesObj } from "./data/opcionesObj.js";
 import { enviar } from "./localStore/estadisticasJuego.js";
 import { guardarEstadisticas } from "./data/registroEstadisticas.js";
+import {alamcenarPreguntasLocalStorage } from "./data/preguntasObj.js"
 
 //Modelos a utilizar
-
 import { Juego } from "./models/Juego.js";
 import { ContenidoIzq } from "./view/ContenidoIzq.js";
 import { JavaJuego } from "./view/JavaJuego.js";
 import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
+
+alamcenarPreguntasLocalStorage ();
+let storeJugadores = localStorage.getItem("localPreguntas");
+let preguntasObj = JSON.parse(storeJugadores);
+
 
 //Llamar nombre del localStorage
 function localNombreJugador() {
@@ -27,29 +32,8 @@ function localNombreJugador() {
 }
 let nombre = localNombreJugador().nombre;
 
-//Mostrar datos del local storage
 
-/* console.log(mostrarLocal()); */
 
-/* let arrayLocal = mostrarLocal()
-const table = document.querySelector("#table")
-let cadena = `<tr>
-<td>Nombre</td>
-<td>score</td>
-<td>Ronda superada</td>
-<td>victoria</td>
-</tr>`
-arrayLocal.map((jugador)=> {
-cadena += `<tr>
-<td>${jugador.nombre}</td>
-<td>${jugador.score}</td>
-<td>${jugador.rondaSuperada}</td>
-<td>${jugador.victoria}</td>
-</tr>
-`
-})
-
-table.innerHTML = cadena */
 
 const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
   const buttonretirar = document.querySelector("#buttonretirar");
@@ -95,12 +79,13 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     //Hasta aca haciendo pruebas
   } else {
     contenidoIzq.cargarLogo("./src/images/logoSofka.png", "Sofka U");
-
+   
     rondaObj.numerorondas(preguntasObj);
 
     javaJuego.temaCategoria(categoriasObj[rondaObj.rondaActual - 1].categoria);
 
-    javaJuego.relacionPreguntas(rondaObj.rondaActual, rondaObj.numeroRondas);
+
+  /*  javaJuego.relacionPreguntas(juegoJava.index,rondaObj.numeroRondas) */
 
     const respuesta = juego.preguntaAlAzar(preguntasObj); //Almacenamos la pregunta al azar en variable
 
@@ -111,7 +96,7 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     contenidoIzq.premioDinamico(rondaObj.rondaActual, premioAGanarCategoria);
 
     javaJuego.cargarPreguntaAlAzar(pregunta);
-
+    javaJuego.relacionPreguntas(juego.entregaIndicePreguntaAlazar(),rondaObj.numeroRondas)
     javaJuego.estadisticasJugador(
       nombre,
       rondaObj.rondaActual,
