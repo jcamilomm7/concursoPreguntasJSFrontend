@@ -2,7 +2,7 @@
 //Api
 
 export function guardarEstadisticas(data) {
-  const url = `http://localhost:2750/api/v1/estadisticas-usuario`;
+  const url = `https://concursopreguntassofka.herokuapp.com/api/v1/estadisticas-usuario`;
   const params = {
     method: "POST",
     body: JSON.stringify(data),

@@ -1,5 +1,5 @@
 //Aca se debe mandar a llamar el api de historico personal
-const url = `http://localhost:2750/api/v1/historico-personal`;
+const url = `https://concursopreguntassofka.herokuapp.com/api/v1/historico-personal`;
 
 fetch(url)
   .then((response) => {

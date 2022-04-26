@@ -1,7 +1,7 @@
 //Api
 
 function signUpApi(data) {
-  const url = `http://localhost:2750/api/v1/iniciarsesion-usuario`;
+  const url = `https://concursopreguntassofka.herokuapp.com/api/v1/iniciarsesion-usuario`;
   const params = {
     method: "POST",
     body: JSON.stringify(data),

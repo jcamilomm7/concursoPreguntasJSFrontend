@@ -1,2 +1,2 @@
-export const encontrarPreguntas = "http://localhost:2750/api/v1/encontrar-cat-java"
+export const encontrarPreguntas = "https://concursopreguntassofka.herokuapp.com/api/v1/encontrar-cat-java"
 
