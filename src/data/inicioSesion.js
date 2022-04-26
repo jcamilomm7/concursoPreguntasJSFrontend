@@ -1,4 +1,3 @@
-
 //Api
 
 function signUpApi(data) {
@@ -26,36 +25,51 @@ function signUpApi(data) {
     });
 }
 
-const btnIniciarSesion = document.querySelector("#btniniciarsesion")
+const btnIniciarSesion = document.querySelector("#btniniciarsesion");
 
-btnIniciarSesion.addEventListener("click",registro,false)
+btnIniciarSesion.addEventListener("click", registro, false);
 
-function registro(){
+function registro() {
   event.preventDefault();
-  const nombre = document.querySelector("#nombreiniciarsesion").value
-  const password = document.querySelector("#contrasenainiciarsesion").value
+  const nombre = document.querySelector("#nombreiniciarsesion").value;
+  const password = document.querySelector("#contrasenainiciarsesion").value;
   const nombreJugador = {
-      nombre:nombre,
-      contrasena:password
-  }
-  localStorage.setItem('localNombreJugador',JSON.stringify(nombreJugador))
+    nombre: nombre,
+    contrasena: password,
+  };
+  localStorage.setItem("localNombreJugador", JSON.stringify(nombreJugador));
   const login = async () => {
-    /*   e.preventDefault(); */
-      const result = await signUpApi(nombreJugador);
-   if(result == undefined){
-     console.log("EL uusario no existe");
-     //agregar un mensaje que el usuario ya existe
-          window.location.href = "/registrarse";
-      }else{
-        //agregar la alerta que el usuario fue creado
-          console.log("El usuario si existe"); 
-          window.location.href = "/java.html"; 
-      }   
-  }
-  login()
-  
-} 
+    const result = await signUpApi(nombreJugador);
+   
+    if (result.contrasena != null || result.contrasena != undefined) {
+      console.log("si se creo");
+      let alertaRoja = document.querySelector("#alertaroja");
+      alertaRoja.innerHTML = `
+    <div class="alert alert-success" role="alert">
+  Login correcto. Disfruta del juego y adquiere conocimiento
+ </div>
+   `;
+      setTimeout(() => {
+        window.location.href = "../../java.html";
+      }, 2000);
+    } else {
+      console.log("no se creo");
+      let alertaRoja = document.querySelector("#alertaroja");
+      alertaRoja.innerHTML = `
+       <div class="alert alert-danger" role="alert">
+       ${result}
+     </div>
+       `;
+      setTimeout(() => {
+        alertaRoja.innerHTML = "";
+      }, 2000);
+    }
 
 
 
+      }
+      
+    
 
+  login();
+}

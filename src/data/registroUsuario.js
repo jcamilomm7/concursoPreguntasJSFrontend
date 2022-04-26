@@ -1,4 +1,3 @@
-
 //Api
 
 function signUpApi(data) {
@@ -26,38 +25,46 @@ function signUpApi(data) {
     });
 }
 
-const btnregistro = document.querySelector("#btnregistro")
+const btnregistro = document.querySelector("#btnregistro");
 
-btnregistro.addEventListener("click",registro,false)
+btnregistro.addEventListener("click", registro, false);
 
-function registro(){
+function registro() {
   event.preventDefault();
-  const nombre = document.querySelector("#nombreregistro").value
-  const password = document.querySelector("#contraseñaregistro").value
+  const nombre = document.querySelector("#nombreregistro").value;
+  const password = document.querySelector("#contraseñaregistro").value;
   const nombreJugador = {
-      nombre:nombre,
-      contrasena:password
-  }
-
+    nombre: nombre,
+    contrasena: password,
+  };
 
   const login = async () => {
-    /*   e.preventDefault(); */
-      const result = await signUpApi(nombreJugador);
-   console.log(result);
-   if(result == undefined){
-     console.log("El usuario ya existe");
-     //agregar un mensaje que el usuario ya existe
-          window.location.href = "/iniciarSesion.html";
-      }else{
-        //agregar la alerta que el usuario fue creado
-          console.log("No puedes ingresar, debes registrarte"); 
-          window.location.href = "/iniciarSesion.html"; 
-      }   
-  }
-  login()
-  
-} 
+    const result = await signUpApi(nombreJugador);
 
-
-
-
+    console.log(result.contrasena);
+    if (result.contrasena != null || result.contrasena != undefined) {
+      console.log("si se creo");
+      let alerta = document.querySelector("#alerta");
+      alerta.innerHTML = `
+    <div class="alert alert-success" role="alert">
+  El registro fue exitoso
+ </div>
+   `;
+      setTimeout(() => {
+        window.location.href = "../../iniciarSesion.html";
+      }, 2000);
+    } else {
+      console.log("no se creo");
+      let alerta = document.querySelector("#alerta");
+      alerta.innerHTML = `
+       <div class="alert alert-danger" role="alert">
+       ${result}
+     </div>
+       `;
+      setTimeout(() => {
+        alerta.innerHTML = "";
+      }, 2000);
+    }
+  };
+  login();
+}

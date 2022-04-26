@@ -241,6 +241,16 @@ footer div {
   font-size: 30px;
 }
 
+.btnfinjuego {
+  width: 30%;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 35px;
+  background-color: #1F2833;
+  border: 2px solid transparent;
+  border-radius: 15px;
+}
+
 #pregunta {
   text-align: center;
   margin-top: 15px;
@@ -443,6 +453,25 @@ footer div {
   min-height: 100vh;
 }
 
+#fondoregistro {
+  background-color: black;
+}
+
+.btnregestilos {
+  background-color: #F9FF33;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  width: 60%;
+  margin-top: 6px;
+}
+
+.btnregestilos:hover {
+  background-color: #FF4500;
+  font-size: 20px;
+  transition: 1.2s;
+  font-weight: 400;
+}
+
 @media (max-width: 1200px) {
   .register2-bg {
     min-height: 50vh;
@@ -455,10 +484,91 @@ footer div {
   min-height: 100vh;
 }
 
+#fondoregistro2 {
+  background-color: black;
+}
+
 @media (max-width: 1200px) {
   .register3-bg {
     min-height: 50vh;
   }
+}
+.container {
+  margin-top: 50px;
+}
+
+.estilosbutton {
+  background-color: #1F2833;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  width: 90%;
+  margin-top: 6px;
+  height: 60px;
+  color: white;
+  font-weight: 500;
+}
+
+.estilosbutton:hover {
+  background-color: #66FCF1;
+  font-size: 20px;
+  transition: 1.2s;
+  font-weight: bold;
+  color: black;
+}
+
+/* Estilos para mi historico0. */
+#containerformulario {
+  margin-top: 40px;
+}
+
+#misestadisticas {
+  height: 35px;
+  width: 60%;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+#btnhistorico {
+  height: 47px;
+  width: 30%;
+  background-color: #1F2833;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  margin-top: 6px;
+  color: white;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+#buscarestadisticas {
+  width: 50%;
+  height: 45px;
+  border-radius: 15px;
+  margin-top: 12px;
+}
+
+#table {
+  margin-left: 10%;
+  width: 45%;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+#tablepersonal {
+  margin-left: 10%;
+  width: 45%;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+#table2 {
+  margin-left: 10%;
+  width: 45%;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

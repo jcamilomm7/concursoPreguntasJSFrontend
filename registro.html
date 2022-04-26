@@ -15,7 +15,7 @@
    
     <div>
       <section class="contact-box">
-        <div class="row no-gutters" style="background-color: #030883;">
+        <div id="fondoregistro" class="row no-gutters">
           <div class="col-xl-5 col-lg-12 register2-bg">
             
           </div>
@@ -28,17 +28,19 @@
                   <div class="form-group col-md-10">
                     <label class="font-weight-bold text-light">Usuario <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nombreregistro" name="nombreregistro" placeholder="Ingresar usuario" required>
-                    <label class="font-weight-bold text-light">Usuario <span class="text-danger">*</span></label>
+                    <label class="font-weight-bold text-light">Contraseña <span class="text-danger">*</span></label>
                     <input type="password" class="form-control" id="contraseñaregistro" name="contraseñaregistro" placeholder="Ingresar constraseña" required>
                   </div>
+                  <div id="alerta"></div>
                 </div>
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-md-6 btninicio">
-                      <button  id="btnregistro" type="submit">Ininiar el juego</button>
+                      <button class="btnregestilos" id="btnregistro" type="submit">Registro</button>
                     </div>
                     <div class="col-sm-12 col-md-6 btninicio">
-                      <button class="btn btn-primary width-100 btnsigin btninicio" id="sigin" name="sigin" type="button"><a class="btnestilos" href="./index.html">Volver al inicio</a></button>
+                      <a href="./index.html"> <button class="btnregestilos" id="btninicio" type="button">Inicio</button></a>
+                      
                     </div>
                   </div>
                 </div>

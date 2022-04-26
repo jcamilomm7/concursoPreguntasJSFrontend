@@ -15,7 +15,7 @@
    
     <div>
       <section class="contact-box">
-        <div class="row no-gutters" style="background-color: #030883;">
+        <div id="fondoregistro2" class="row no-gutters">
           <div class="col-xl-5 col-lg-12 register3-bg">
             <div class="position-absolute testimonial p-4">
               <h3 class="font-weight-bold " style="color:black;"> Concurso de preguntas.</h3>
@@ -26,29 +26,33 @@
             <div class="container align-self-center p-6">
               <h1 class=" font-wight-bold text-light mb-3">Para comenzar el juego.</h1>
               <p class="text-ruted mb-5 text-light">Es necesario que entres con usuario y asi llevar las estadisticas del juego</p>
-              <form action="sigIn.php" method="POST">
+              <form >
                 <div class="form-row mb-2">
                   <div class="form-group col-md-10">
                     <label class="font-weight-bold text-light">Usuario<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="nombreiniciarsesion" name="nombreiniciarsesion" placeholder="Ingresar usuario" required>
                     <label class="font-weight-bold text-light">Contraseña<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="contrasenainiciarsesion" name="contrasenainiciarsesion" placeholder="Ingresar usuario" required>
+                    <input type="password" class="form-control" id="contrasenainiciarsesion" name="contrasenainiciarsesion" placeholder="Ingresar usuario" required>
+                  
+                      
+                    </div>
+                    <div id="alertaroja">
+                      
+                    </div>
                   </div>
                 </div>
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-md-6 btninicio">
-                      <button class="btn btn-primary width-100" id="btniniciarsesion" name="btniniciarsesion" type="submit">Jugar</button>
-
+                      <button class="btnregestilos" id="btniniciarsesion" type="submit">Jugar</button>
                     </div>
-                    <div class="col-sm-12 col-md-6 btninicio">
-                      <button class="btn btn-primary width-100 btnsigin" id="sigin" name="sigin" type="button"><a class="btnestilos" href="./index.html">Volver al inicio</a></button>
+                    <div class="col-sm-12 col-md-6 ">
+                      <a href="./index.html"> <button class="btnregestilos"  type="button">Inicio</button></a>
+                      
                     </div>
                   </div>
                 </div>
-              
-              
-    
+            
               </form>
               
             </div>

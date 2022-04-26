@@ -6,7 +6,27 @@
     min-height: 100vh;
   }
   
+  #fondoregistro{
+    background-color: black;
+  }
   
+  .btnregestilos{
+    background-color: #F9FF33;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    width: 60%;
+    margin-top: 6px;
+}
+
+.btnregestilos:hover {
+
+  background-color:#FF4500;
+  font-size: 20px;
+  transition: 1.2s;
+  font-weight: 400;
+}
+
+
   @media (max-width: 1200px) {
     .register2-bg {
         min-height: 50vh;
