@@ -1,6 +1,6 @@
 //consumo de api para el registro de preguntas
  function crearPregunta(data) {
-    const url = `http://localhost:2750/api/v1/registrar-preguntas`;
+    const url = `https://concursopreguntassofka.herokuapp.com/api/v1/registrar-preguntas`;
     const params = {
       method: "POST",
       body: JSON.stringify(data),
