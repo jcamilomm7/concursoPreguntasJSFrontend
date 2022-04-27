@@ -1,3 +1,5 @@
+import {categoriasObj} from "../data/categorias.js"
+
 class JavaJuego {
   temaCategoria(nombreCategoria) {
     const temaCategoria = document.querySelector("#temacategoria");
@@ -11,9 +13,9 @@ class JavaJuego {
     preguntaAzar.textContent = pregunta;
   }
 
-  relacionPreguntas(index,totalRondas) {
+  relacionPreguntas(index,numeroPreguntas) {
     const relacion = document.querySelector("#relacion");
-    relacion.innerHTML= `<h2 class="relacionpregunta">Pregunta al azar ${index}/${totalRondas}</h2>`;
+    relacion.innerHTML= `<h2 class="relacionpregunta">Pregunta al azar ${index}/${numeroPreguntas}</h2>`;
   }
 
   mostrarOpciones(respuestas, callback) {

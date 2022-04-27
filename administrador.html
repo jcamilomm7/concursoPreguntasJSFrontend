@@ -12,7 +12,7 @@
     />
     <title>Document</title>
   </head>
-  <body>
+  <body id="administrador">
     <nav class="navbar navbar-expand-md navbar-dark sticky-top navestilos">
       <!-- Brand -->
       <a class="navbar-brand" href="#"
@@ -48,7 +48,6 @@
 
     <div class="container">
       <div class="row">
-
         <div class="col-md-4 col-sm-12">
           <button
             class="estilosbutton"
@@ -59,25 +58,117 @@
           </button>
         </div>
         <div class="col-md-4 col-sm-12">
-            <button
-              class="estilosbutton"
-              id="historicopersonal"
-              variant="success"
-            >
-              listar preguntas
-            </button>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <button
-              class="estilosbutton"
-              id="historicopersonal"
-              variant="success"
-            >
-              Listar jugadores
-            </button>
-          </div>
+          <button
+            class="estilosbutton"
+            id="historicopersonal"
+            variant="success"
+          >
+            listar preguntas
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <button
+            class="estilosbutton"
+            id="historicopersonal"
+            variant="success"
+          >
+            Listar jugadores
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Probando para maquetar -->
+    <div class="containerpreguntas">
+        <!-- desde aca sera dinamico -->
+      <div class="row">
+        <div class="col-12">
+          <select id="categorias">
+            <option value="conceptosbasicos">Conceptos Basicos</option>
+            <option value="condicionales">Condicionales</option>
+            <option value="ciclos">Ciclos</option>
+            <option value="arrays">Arrays</option>
+            <option value="poo">POO</option>
+          </select>
+        </div>
+        <!-- Aca van las preguntas -->
+        <div class="col-12">
+          <textarea
+            name="pregunta"
+            id="pregunta"
+            cols="7"
+            rows="3"
+            autocomplete
+            placeholder="Escriba la pregunta"
+          ></textarea>
+        </div>
+        <!-- Aca van las respuestas -->
+        <div class="col-md-6 col-sm-12 col-lg-3">
+            <textarea
+            class="estilospreguntas"
+            name="respuesta1"
+            id="respuesta1"
+            autocomplete
+            placeholder="Escriba respuesta 1"
+          ></textarea>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-3">
+            <textarea
+            class="estilospreguntas"
+            name="respuesta2"
+            id="respuesta2"
+           
+            autocomplete
+            placeholder="Escriba respuesta 2"
+          ></textarea>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-3">
+            <textarea
+            class="estilospreguntas"
+            name="respuesta3"
+            id="respuesta3"
+            
+            autocomplete
+            placeholder="Escriba respuesta 3"
+          ></textarea>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-3">
+            <textarea
+            class="estilospreguntas"
+            name="respuesta4"
+            id="respuesta4"
+            autocomplete
+            placeholder="Escriba respuesta 4"
+          ></textarea>
+        </div>
+        <!-- Aca va la respuesta -->
+        <div class="col-12">
+            <textarea
+              name="correcta"
+              id="correcta"
+              cols="7"
+              rows="3"
+              autocomplete
+              placeholder="Escriba la respuesta correcta"
+            ></textarea>
+          </div>
+          <div class="col-12">
+            <div id="alertapregunta"></div>
+            <button
+            class="btnenviarpregunta"
+            id="enviarpregunta"
+            variant="success"
+          >
+            Enviar
+          </button>
+
+          </div>
+         
+      </div>
+    </div>
+
+    <!-- Script propios -->
+    <script src="./src/data/administrador.js"></script>
 
     <!-- Script de bootstrap -->
     <script

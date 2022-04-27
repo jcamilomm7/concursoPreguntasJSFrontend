@@ -13,8 +13,12 @@ class Categoria {
 
   numeroPreguntasCategoria() {
     for (let i = 0; i < preguntasObj.length; i++) {
-      this.categoria = preguntasObj.length;
+      this.numeroPreguntas = preguntasObj.length;
     }
+  }
+
+  getCategoria(){
+    return  this.numeroPreguntas
   }
 }
 export { Categoria };

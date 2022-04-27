@@ -76,9 +76,9 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     contenidoIzq.cargarLogo("./src/images/logoSofka.png", "Sofka U");
 
     rondaObj.numerorondas(preguntasObj);
-
+    
     javaJuego.temaCategoria(categoriasObj[rondaObj.rondaActual - 1].categoria);
-
+   
     /*  javaJuego.relacionPreguntas(juegoJava.index,rondaObj.numeroRondas) */
 
     const respuesta = juego.preguntaAlAzar(preguntasObj); //Almacenamos la pregunta al azar en variable
@@ -92,8 +92,10 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     javaJuego.cargarPreguntaAlAzar(pregunta);
     javaJuego.relacionPreguntas(
       juego.entregaIndicePreguntaAlazar(),
-      rondaObj.numeroRondas
+      preguntasObj[rondaObj.rondaActual - 1].length
+      
     );
+  
     javaJuego.estadisticasJugador(
       nombre,
       rondaObj.rondaActual,
