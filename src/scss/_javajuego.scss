@@ -1,5 +1,6 @@
 .body{
     overflow: hidden;
+    zoom: 92%;
 }
 .bienvenido {
   text-align: center;
@@ -147,3 +148,47 @@
 #retirarboton {
   margin-left: 50px;
 }
+.relacionpregunta{
+  font-family: "Caveat", cursive;
+}
+
+#avatar {
+  h3{
+    text-align: center;
+  }
+}
+
+//Adapatacion de pantalla responsive
+@media (max-width: 800px) {
+  .body{
+    overflow:auto;
+}
+  }
+
+  @media (max-width: 760px) {
+    .estadisticas{
+      text-align: center;
+      justify-content: center;
+  }
+    }
+
+    @media (max-width: 760px) {
+      #buttonretirar{
+        margin-left: 25%;
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    .dinamico{
+      text-align: center;
+      justify-content: center;
+  }
+
+  
+      }
+  
+     
+      
+ 

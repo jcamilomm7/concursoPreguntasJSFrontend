@@ -13,7 +13,7 @@ class JavaJuego {
 
   relacionPreguntas(index,totalRondas) {
     const relacion = document.querySelector("#relacion");
-    relacion.innerHTML= `<h2>Pregunta ${index}/${totalRondas} en total</h2>`;
+    relacion.innerHTML= `<h2 class="relacionpregunta">Pregunta al azar ${index}/${totalRondas}</h2>`;
   }
 
   mostrarOpciones(respuestas, callback) {

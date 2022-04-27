@@ -10,6 +10,7 @@
     height: 60px;
     color: white;
     font-weight: 500;
+    margin-left: 5%;
 }
 .btnbuscarborrar{
   background-color: #45A29E;
@@ -52,14 +53,14 @@
 
   #btnhistorico{
     height: 47px;
-    width: 30%;
+    width: 70%;
     background-color: #1F2833;
     border: 2px solid transparent;
     border-radius: 15px;
     margin-top: 6px;
     color: white;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 15%;
 
   }
   
@@ -72,8 +73,8 @@
   }
 
   #table{
-      margin-left: 10%;
-      width: 45%;
+      /* margin-left: 5%; */
+      width: 100%;
       margin-top: 50px;
       text-align: center;
       justify-content: center;
@@ -94,6 +95,25 @@
     text-align: center;
     justify-content: center;
   }
+  @media (max-width: 600px) {
+    #buscarestadistica{
+      margin-top: 5px;
+        width: 80%;
+        margin-left: 10%;
+    }
+  }
 
-
+  #estadisticaFinal {
+    h2{
+      text-align: center;
+    justify-content: center;
+  }
+    }
   
+    #avatar {
+      h3{
+        text-align: center;
+      justify-content: center;
+    }
+      }
+    

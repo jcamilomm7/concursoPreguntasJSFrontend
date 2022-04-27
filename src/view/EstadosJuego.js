@@ -22,17 +22,19 @@ class EstadosJuego {
                   <img src="./src/images/avatar.gif" alt="">
                   <h3>Jugador: ${nombre}</h3>
                 </div>
-                <div id="estadisticaFinal" class="col-md-6">
-                    <h3 class="zoom">Estadisticas</h3>                  
-                    <h2>Score: $${score} pesos</h2>                  
-                    <h2>Rondas Superadas: ${rondaActual - 2}</h2>                  
-                    <h2>Estado: Haz perdido</h2>
+                <div id="estadisticaFinal" class="col-md-6 col-sm-12 ">
+                    <h3 class="zoom dinamico">Estadisticas</h3>                  
+                    <h2 >Score: $${score} pesos</h2>                  
+                    <h2 >Rondas Superadas: ${
+                      rondaActual - 2
+                    }</h2>                  
+                    <h2 >Estado: Haz perdido</h2>
                   </div>
               </div>
             </div>
       `;
     contenedorEstados.innerHTML = contenido;
-    const agregarButton = document.querySelector("#agregarbutton")
+    const agregarButton = document.querySelector("#agregarbutton");
     agregarButton.innerHTML = `
     <a href="./index.html"><button
     class="btnfinjuego"
@@ -47,7 +49,7 @@ class EstadosJuego {
    id="historicopersonal"
     variant="success"
    >Volver a jugar</button></a>
-    `
+    `;
   }
 
   ganarJuego(score, rondaActual, nombre) {
@@ -73,11 +75,13 @@ class EstadosJuego {
                     <img src="./src/images/avatar.gif" alt="">
                     <h3>Jugador: ${nombre}</h3>
                   </div>
-                  <div id="estadisticaFinal" class="col-md-6">
-                  <h3 class="zoom">Estadisticas</h3>                  
-                  <h2>Score: $${score} pesos</h2>                  
-                  <h2>Rondas Superadas: ${rondaActual-1}</h2>                  
-                  <h2>Estado: Haz ganado</h2>
+                  <div id="estadisticaFinal" class="col-md-6 col-sm-12">
+                  <h3 class="zoom dinamico">Estadisticas</h3>                  
+                  <h2 class="dinamico">Score: $${score} pesos</h2>                  
+                  <h2 class="dinamico">Rondas Superadas: ${
+                    rondaActual - 1
+                  }</h2>                  
+                  <h2 class="dinamico">Estado: Haz ganado</h2>
                 </div>
                   </div>
                 </div>
@@ -85,7 +89,7 @@ class EstadosJuego {
       </div>
       `;
     contenedorEstados.innerHTML = contenido;
-    const agregarButton = document.querySelector("#agregarbutton")
+    const agregarButton = document.querySelector("#agregarbutton");
     agregarButton.innerHTML = `
     <a href="./index.html"><button
     class="btnfinjuego"
@@ -100,9 +104,9 @@ class EstadosJuego {
    id="historicopersonal"
     variant="success"
    >Volver a jugar</button></a>
-    `
+    `;
   }
-  
+
   retirarseJuego(score, rondaActual, nombre) {
     const contenedorEstados = document.querySelector(".borrarinformacion");
     contenedorEstados.innerHTML = "";
@@ -121,24 +125,26 @@ class EstadosJuego {
                 </div>
               </div>
               
-              <div class="col-md-12">
+              <div class="col-md-12 col-sm-12">
                 <div class="row">
                   <div id="avatar" class="col-md-6">
                     <img src="./src/images/avatar.gif" alt="">
                     <h3>Jugador: ${nombre}</h3>
                   </div>
-                  <div id="estadisticaFinal" class="col-md-6">
-                    <h3 class="zoom">Estadisticas</h3>                  
-                    <h2>Score: $${score} pesos</h2>                  
-                    <h2>Rondas Superadas: ${rondaActual - 1}</h2>                  
-                    <h2>Estado: Te haz retirado</h2>
+                  <div id="estadisticaFinal" class="col-md-6 col-sm-12 dinamico">
+                    <h3 class="zoom dinamico" >Estadisticas</h3>                  
+                    <h2 class="dinamico">Score: $${score} pesos</h2>                  
+                    <h2 class="dinamico">Rondas Superadas: ${
+                      rondaActual - 1
+                    }</h2>                  
+                    <h2 class="dinamico">Estado: Te haz retirado</h2>
                   </div>
                 </div>
               </div>
       </div>
       `;
     contenedorEstados.innerHTML = contenido;
-    const agregarButton = document.querySelector("#agregarbutton")
+    const agregarButton = document.querySelector("#agregarbutton");
     agregarButton.innerHTML = `
     <a href="./index.html"><button
     class="btnfinjuego"
@@ -153,7 +159,7 @@ class EstadosJuego {
    id="historicopersonal"
     variant="success"
    >Volver a jugar</button></a>
-    `
+    `;
   }
 }
 

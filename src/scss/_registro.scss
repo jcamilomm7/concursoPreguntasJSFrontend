@@ -32,3 +32,11 @@
         min-height: 50vh;
     }
   }
+
+  @media (max-width: 800px) {
+    .btnregestilos{
+      margin-top: 5px;
+        width: 80%;
+        margin-left: 10%;
+    }
+  }

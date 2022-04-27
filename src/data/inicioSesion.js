@@ -44,6 +44,7 @@ function registro() {
     if (result.contrasena != null || result.contrasena != undefined) {
       console.log("si se creo");
       let alertaRoja = document.querySelector("#alertaroja");
+      
       alertaRoja.innerHTML = `
     <div class="alert alert-success" role="alert">
   Login correcto. Disfruta del juego y adquiere conocimiento

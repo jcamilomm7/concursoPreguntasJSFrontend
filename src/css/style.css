@@ -216,6 +216,7 @@ footer div {
 
 .body {
   overflow: hidden;
+  zoom: 92%;
 }
 
 .bienvenido {
@@ -361,6 +362,39 @@ footer div {
   margin-left: 50px;
 }
 
+.relacionpregunta {
+  font-family: "Caveat", cursive;
+}
+
+#avatar h3 {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .body {
+    overflow: auto;
+  }
+}
+@media (max-width: 760px) {
+  .estadisticas {
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 760px) {
+  #buttonretirar {
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+  }
+
+  .dinamico {
+    text-align: center;
+    justify-content: center;
+  }
+}
 #imgretirar img {
   height: 100px;
   margin-top: 50px;
@@ -477,6 +511,13 @@ footer div {
     min-height: 50vh;
   }
 }
+@media (max-width: 800px) {
+  .btnregestilos {
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
 .register3-bg {
   background-image: url("../images/ct.jpg");
   background-size: cover;
@@ -506,6 +547,7 @@ footer div {
   height: 60px;
   color: white;
   font-weight: 500;
+  margin-left: 5%;
 }
 
 .btnbuscarborrar {
@@ -543,14 +585,14 @@ footer div {
 
 #btnhistorico {
   height: 47px;
-  width: 30%;
+  width: 70%;
   background-color: #1F2833;
   border: 2px solid transparent;
   border-radius: 15px;
   margin-top: 6px;
   color: white;
   font-weight: 500;
-  margin-left: 15px;
+  margin-left: 15%;
 }
 
 #buscarestadisticas {
@@ -562,8 +604,8 @@ footer div {
 }
 
 #table {
-  margin-left: 10%;
-  width: 45%;
+  /* margin-left: 5%; */
+  width: 100%;
   margin-top: 50px;
   text-align: center;
   justify-content: center;
@@ -580,6 +622,23 @@ footer div {
 #table2 {
   width: 100%;
   margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  #buscarestadistica {
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+#estadisticaFinal h2 {
+  text-align: center;
+  justify-content: center;
+}
+
+#avatar h3 {
   text-align: center;
   justify-content: center;
 }

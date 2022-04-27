@@ -54,7 +54,18 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-6">
+       
+        <div class="col-md-6 col-sm-12">
+          <input
+            id="buscarestadisticas"
+            type="text"
+            placeholder="Filtrar estadisticas por nombre"
+          />
+          <button class="btnbuscarborrar" id="btnbuscar" variant="success">Buscar</button>
+          <button class="btnbuscarborrar" id="btnborrar" variant="success">Borrar</button>
+          <table id="tablepersonal" class="table table-dark table-sm"></table>
+        </div>
+        <div class="col-md-6 col-sm-12">
           <button
             class="estilosbutton"
             id="historicopersonal"
@@ -64,17 +75,6 @@
           </button>
 
           <table id="table" class="table table-dark table-sm"></table>
-        </div>
-
-        <div class="col-6">
-          <input
-            id="buscarestadisticas"
-            type="text"
-            placeholder="Filtrar estadisticas por nombre"
-          />
-          <button class="btnbuscarborrar" id="btnbuscar" variant="success">Buscar</button>
-          <button class="btnbuscarborrar" id="btnborrar" variant="success">Borrar</button>
-          <table id="tablepersonal" class="table table-dark table-sm"></table>
         </div>
       </div>
     </div>
