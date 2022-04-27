@@ -216,7 +216,7 @@ footer div {
 
 .body {
   overflow: hidden;
-  zoom: 92%;
+  zoom: 90%;
 }
 
 .bienvenido {
@@ -252,12 +252,14 @@ footer div {
   border-radius: 15px;
 }
 
-#pregunta {
+.pregunta #pregunta {
   text-align: center;
   margin-top: 15px;
   font-family: "Caveat", cursive;
-  font-size: 40px;
+  font-size: 50px;
+  margin-left: 10%;
   font-weight: 800;
+  width: 80%;
 }
 
 #relacion {

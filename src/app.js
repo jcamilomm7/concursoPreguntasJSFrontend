@@ -93,7 +93,6 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     javaJuego.relacionPreguntas(
       juego.entregaIndicePreguntaAlazar(),
       preguntasObj[rondaObj.rondaActual - 1].length
-      
     );
   
     javaJuego.estadisticasJugador(
