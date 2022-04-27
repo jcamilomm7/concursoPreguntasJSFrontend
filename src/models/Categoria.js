@@ -1,4 +1,3 @@
-
 let storeJugadores = localStorage.getItem("localPreguntas");
 let preguntasObj = JSON.parse(storeJugadores);
 class Categoria {
@@ -8,7 +7,7 @@ class Categoria {
    * @param {*Number} numeroPreguntas
    */
   constructor(categoria, numeroPreguntas) {
-    this.categoria = categoria ;
+    this.categoria = categoria;
     this.numeroPreguntas = numeroPreguntas;
   }
 

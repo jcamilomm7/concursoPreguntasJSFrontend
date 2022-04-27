@@ -6,7 +6,7 @@ import { categoriasObj } from "./data/categorias.js";
 import { opcionesObj } from "./data/opcionesObj.js";
 import { enviar } from "./localStore/estadisticasJuego.js";
 import { guardarEstadisticas } from "./data/registroEstadisticas.js";
-import {alamcenarPreguntasLocalStorage } from "./data/preguntasObj.js"
+import { alamcenarPreguntasLocalStorage } from "./data/preguntasObj.js";
 
 //Modelos a utilizar
 import { Juego } from "./models/Juego.js";
@@ -15,10 +15,9 @@ import { JavaJuego } from "./view/JavaJuego.js";
 import { EstadosJuego } from "./view/EstadosJuego.js";
 import { Jugador } from "./models/Jugador.js";
 
-alamcenarPreguntasLocalStorage ();
+alamcenarPreguntasLocalStorage();
 let storeJugadores = localStorage.getItem("localPreguntas");
 let preguntasObj = JSON.parse(storeJugadores);
-
 
 //Llamar nombre del localStorage
 function localNombreJugador() {
@@ -31,9 +30,6 @@ function localNombreJugador() {
   }
 }
 let nombre = localNombreJugador().nombre;
-
-
-
 
 const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
   const buttonretirar = document.querySelector("#buttonretirar");
@@ -50,7 +46,6 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     estado.retirarseJuego(premiosObj.score, rondaObj.rondaActual, nombre);
     guardarEstadisticas(jugador);
     enviar(jugador);
-    
   }
 
   //Si gana el juego entra aca
@@ -79,13 +74,12 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     //Hasta aca haciendo pruebas
   } else {
     contenidoIzq.cargarLogo("./src/images/logoSofka.png", "Sofka U");
-   
+
     rondaObj.numerorondas(preguntasObj);
 
     javaJuego.temaCategoria(categoriasObj[rondaObj.rondaActual - 1].categoria);
 
-
-  /*  javaJuego.relacionPreguntas(juegoJava.index,rondaObj.numeroRondas) */
+    /*  javaJuego.relacionPreguntas(juegoJava.index,rondaObj.numeroRondas) */
 
     const respuesta = juego.preguntaAlAzar(preguntasObj); //Almacenamos la pregunta al azar en variable
 
@@ -96,7 +90,10 @@ const renderPage = (juego, contenidoIzq, javaJuego, estado) => {
     contenidoIzq.premioDinamico(rondaObj.rondaActual, premioAGanarCategoria);
 
     javaJuego.cargarPreguntaAlAzar(pregunta);
-    javaJuego.relacionPreguntas(juego.entregaIndicePreguntaAlazar(),rondaObj.numeroRondas)
+    javaJuego.relacionPreguntas(
+      juego.entregaIndicePreguntaAlazar(),
+      rondaObj.numeroRondas
+    );
     javaJuego.estadisticasJugador(
       nombre,
       rondaObj.rondaActual,

@@ -1,5 +1,5 @@
 import { premiosObj } from "../data/premiosObj.js";
-import { rondaObj } from "../data/rondasObj.js"; 
+import { rondaObj } from "../data/rondasObj.js";
 class Premio {
   index = 0;
   score = 0;
@@ -20,13 +20,13 @@ class Premio {
       this.index++;
       this.acertadas++;
     }
-    if (this.index === rondaObj.numeroRondas) {  
+    if (this.index === rondaObj.numeroRondas) {
       this.score += premiosObj.campeon;
     }
   }
 
-  premioPorCategoria(){
-    return premiosObj.premios[this.index]
+  premioPorCategoria() {
+    return premiosObj.premios[this.index];
   }
 }
 

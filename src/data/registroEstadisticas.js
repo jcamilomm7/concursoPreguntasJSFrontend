@@ -1,4 +1,3 @@
-
 //Api
 
 export function guardarEstadisticas(data) {
@@ -25,9 +24,3 @@ export function guardarEstadisticas(data) {
       return err.message;
     });
 }
-
-
-
-
-
-

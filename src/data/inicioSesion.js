@@ -40,19 +40,32 @@ function registro() {
   localStorage.setItem("localNombreJugador", JSON.stringify(nombreJugador));
   const login = async () => {
     const result = await signUpApi(nombreJugador);
-   
+
     if (result.contrasena != null || result.contrasena != undefined) {
-      console.log("si se creo");
-      let alertaRoja = document.querySelector("#alertaroja");
-      
-      alertaRoja.innerHTML = `
-    <div class="alert alert-success" role="alert">
-  Login correcto. Disfruta del juego y adquiere conocimiento
- </div>
-   `;
-      setTimeout(() => {
-        window.location.href = "../../java.html";
-      }, 2000);
+      if (result.nombre === "jcamilomm7") {
+        let alertaRoja = document.querySelector("#alertaroja");
+
+        alertaRoja.innerHTML = `
+      <div class="alert alert-success" role="alert">
+    Login de administrador correcto
+   </div>
+     `;
+        setTimeout(() => {
+          window.location.href = "../../administrador.html";
+        }, 2000);
+      }else{
+        let alertaRoja = document.querySelector("#alertaroja");
+
+        alertaRoja.innerHTML = `
+      <div class="alert alert-success" role="alert">
+    Login usuario correcto. Disfruta del juego y adquiere conocimiento
+   </div>
+     `;
+        setTimeout(() => {
+          window.location.href = "../../java.html";
+        }, 2000);
+      }
+     
     } else {
       console.log("no se creo");
       let alertaRoja = document.querySelector("#alertaroja");
@@ -65,12 +78,7 @@ function registro() {
         alertaRoja.innerHTML = "";
       }, 2000);
     }
-
-
-
-      }
-      
-    
+  };
 
   login();
 }

@@ -1,30 +1,25 @@
-import {Categoria} from "../models/Categoria.js"
+import { Categoria } from "../models/Categoria.js";
 
 export const categorias = [
   {
     categoria: "Conceptos Generales",
     numeroPreguntas: 0,
-
   },
   {
     categoria: "Condicionales",
     numeroPreguntas: 0,
-    
   },
   {
     categoria: "Ciclos",
     numeroPreguntas: 0,
-  
   },
   {
     categoria: "Arreglos",
     numeroPreguntas: 0,
-   
   },
   {
     categoria: "POO",
     numeroPreguntas: 0,
-  
   },
 ];
 

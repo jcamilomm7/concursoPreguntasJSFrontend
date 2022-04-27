@@ -1,6 +1,5 @@
 import { rondaObj } from "../data/rondasObj.js";
 
-
 class Ronda {
   /**
    *
@@ -17,7 +16,7 @@ class Ronda {
   }
 
   numerorondas(preguntasObj) {
-   this.numeroRondas = preguntasObj.length;  
+    this.numeroRondas = preguntasObj.length;
   }
 }
 

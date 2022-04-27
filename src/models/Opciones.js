@@ -6,7 +6,7 @@ class Opciones {
    * @param {boolean} perder
    * @param {boolean} ganarJuego
    */
-  constructor(ganarRonda, retiroVoluntario, perder,ganarJuego) {
+  constructor(ganarRonda, retiroVoluntario, perder, ganarJuego) {
     this.ganarJuego = ganarRonda;
     this.retiroVoluntario = retiroVoluntario;
     this.perder = perder;
@@ -20,4 +20,4 @@ class Opciones {
   }
 }
 
-export { Opciones};
+export { Opciones };
